@@ -80,9 +80,17 @@
 	<div class="row">
 		<div class="col-xs-8">
 			<h2>{{loo.name}}</h2>
-			<br>
+      <span ng-hide="editing">{{loo.name}}</span>
+      <input ng-show="editing" ng-model="loo.name" type="text" class="form-control input-md">
+
+      <br>
 			<p class="small">Latitude: {{loo.lat}}</p>
-			<p class="small">Longitude: {{loo.long}}</p>
+      <span ng-hide="editing">{{loo.lat}}</span>
+      <input ng-show="editing" ng-model="loo.lat" type="text" class="form-control input-md">
+
+      <p class="small">Longitude: {{loo.long}}</p>
+      <span ng-hide="editing">{{loo.long}}</span>
+      <input ng-show="editing" ng-model="loo.long" type="text" class="form-control input-md">
 		</div>
 	</div>
   <div class='panel-footer'>
